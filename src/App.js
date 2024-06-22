@@ -33,16 +33,15 @@ function App() {
         <p className='header-name'>Welcome {user?.displayName}</p>
         <div className='header-signout'>
           <img src={user?.photoURL} className='header-pic' />
-          {/* <button onClick={SignOut}>Sign Out</button> */}
           <SignOut />
         </div>
       </header>
 
-
-      <section>
+      <div className='default-bg'></div>
+      <section className={user ? "chat-room-section" : "sign-in-section"}>
         {user ? <ChatRoom /> : <SignIn />}
       </section>
-    </div>
+    </div >
   );
 }
 
@@ -53,7 +52,9 @@ function SignIn() {
   }
 
   return (
-    <button onClick={signInGoogle}> Sign in with google </button >
+    <div className='sign-in-div'>
+      <button onClick={signInGoogle} className='sign-in-button'> Sign in with Google </button >
+    </div>
   )
 }
 
