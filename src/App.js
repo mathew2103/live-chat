@@ -11,12 +11,12 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { useState } from 'react';
 
 firebase.initializeApp({
-  apiKey: "AIzaSyDekESw7USbPJUdmALxJEKXkw3jS9XqjXI",
+  apiKey: process.env.API_KEY,
   authDomain: "live-chat-app-47295.firebaseapp.com",
   projectId: "live-chat-app-47295",
   storageBucket: "live-chat-app-47295.appspot.com",
-  messagingSenderId: "532090554275",
-  appId: "1:532090554275:web:ee5aaaaec9002bdb8bfc16",
+  messagingSenderId: process.env.SENDER_ID,
+  appId: process.env.APP_ID,
   measurementId: "G-HDLHXXNFSF"
 })
 
